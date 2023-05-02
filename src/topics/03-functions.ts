@@ -18,13 +18,37 @@ function multiply(
 
 // Argumentos => (1, 2)
 const result: number = addNumbers(1, 2);
-console.log({ result });
+// console.log({ result });
 
 const resultString: string = addNumbersArrow(1, 2);
-console.log({ resultString });
+// console.log({ resultString });
 
 const resultMultiply: number = multiply(5);
-console.log({ resultMultiply });
+// console.log({ resultMultiply });
+
+
+interface Character {
+  name: string;
+  hp: number;
+  showHp: () => void;
+}
+
+const healCharacter = (character: Character, amount: number): void => {
+  character.hp += amount;
+}
+
+const strider: Character = {
+  name: 'Strinder',
+  hp: 50,
+  showHp() {
+    console.log(`Puntos de vida ${ this.hp }`);
+  },
+}
+
+healCharacter(strider, 10);
+healCharacter(strider, 50);
+
+strider.showHp();
 
 
 export {};
