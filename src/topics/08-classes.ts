@@ -11,20 +11,35 @@ export class Person {
   // }
 
   constructor(
-    public name: string, 
+    public firstName: string,
+    public lastName: string,
     private address: string = 'No Address'
   ) {}
 
 }
 
-export class Hero extends Person {
+// export class Hero extends Person {
+
+//   constructor(
+//     public alterEgo: string,
+//     public age: number,
+//     public realName: string,
+//   ) {
+//     super(realName, 'New York');
+//   }
+
+// }
+
+//** Priorizar la composicion frente a la herencia
+export class Hero {
 
   constructor(
     public alterEgo: string,
     public age: number,
     public realName: string,
+    public person: Person,
   ) {
-    super(realName, 'New York');
+
   }
 
 }
@@ -32,7 +47,9 @@ export class Hero extends Person {
 // const ironman = new Person('Ironman', 'New York');
 // const ironman = new Person('Ironman');
 // const ironman = new Hero('Ironman', 'New York');
-const ironman = new Hero('Ironman', 45, 'Tony');
+
+const tony = new Person('Tony', 'Stark', 'New York');
+const ironman = new Hero('Ironman', 45, 'Tony', tony);
 
 console.log(ironman);
 
