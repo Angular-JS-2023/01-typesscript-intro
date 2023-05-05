@@ -1,5 +1,5 @@
 
-interface Product {
+export interface Product {
   description: string;
   price: number;
 }
@@ -43,5 +43,6 @@ const [ total, taxTotal ] = taxCalculation({
 console.log('Total', total);
 console.log('Tax', taxTotal);
 
-
-export {};
+export {
+  taxCalculation,
+}
