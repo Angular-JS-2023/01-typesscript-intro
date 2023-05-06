@@ -10,7 +10,8 @@ import './style.css';
 // import '../src/topics/07-import-export';
 // import '../src/topics/08-classes';
 // import '../src/topics/09-generics';
-import '../src/topics/10-decorators';
+// import '../src/topics/10-decorators';
+import '../src/topics/11-optional-chaining';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <h1>Hola Mundo</h1>
